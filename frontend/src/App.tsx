@@ -7,13 +7,13 @@ import{
 import Layout from "./layouts/Layout";
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
-import AddCar from "./pages/AggiungiAuto";
 import { useAppContext } from "./contexts/AppContext";
+import AddCar from "./pages/AggiungiAuto";
 
 const App = () => {
   const {isLoggedIn} = useAppContext();
   return (
-
+    
     <Router>
       <Routes>
         <Route path="/" element={<Layout>
@@ -33,7 +33,6 @@ const App = () => {
             <SignIn/>
           </Layout>
         }/>
-
         {isLoggedIn && <>
           <Route path="/add-car" element={
             <Layout>

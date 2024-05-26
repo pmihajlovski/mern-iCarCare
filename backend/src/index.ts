@@ -6,9 +6,9 @@ import mongoose from "mongoose";//connect and interact with database without wri
 import userRoutes from "./routes/users";//importing the register routes
 import authRoutes from "./routes/auth";
 import cookieParser from "cookie-parser";
-import path from "path";
 import { v2 as cloudinary } from "cloudinary";
 import myCarRoutes from "./routes/my-cars";
+import path from "path";
 
 
 cloudinary.config({
@@ -37,12 +37,12 @@ app.use(cors({
 app.use(express.static(path.join(__dirname,"../../frontend/dist")));
 
 app.use("/api/auth", authRoutes);
-app.use("/api/users", userRoutes);//test with api client
+app.use("/api/users", userRoutes)//test with api client
 app.use("/api/my-cars", myCarRoutes);
 
 app.get("*", (req: Request, res: Response)=>{
   res.sendFile(path.join(__dirname, "../../frontend/dist/indext.html"))
-})
+});
 
 app.listen(7002, ()=>{
   console.log("Server running on localhost:7002");
