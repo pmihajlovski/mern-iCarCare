@@ -39,14 +39,14 @@ const Register = ()=> {
       <div className="flex flex-col md:flex-row gap-5">
         <label className="text-gray-700 text-sm font-bold flex-1">
           Nome
-          <input className="border rounded w-full py-1 px-2 font-normal" {...register("firstName", {required: "Questo campo è necessario"})}/>
+          <input className="border rounded w-full py-1 px-2 font-normal" {...register("firstName", {required: "Questo campo è obbligatorio"})}/>
           {errors.firstName && (
           <span className="text-red-500">{errors.firstName.message}</span>
           )}
         </label>
         <label className="text-gray-700 text-sm font-bold flex-1">
           Cognome
-          <input className="border rounded w-full py-1 px-2 font-normal" {...register("lastName", {required: "Questo campo è necessario"})}/>
+          <input className="border rounded w-full py-1 px-2 font-normal" {...register("lastName", {required: "Questo campo è obbligatorio"})}/>
           {errors.lastName && (
           <span className="text-red-500">{errors.lastName.message}</span>
           )}
@@ -56,7 +56,7 @@ const Register = ()=> {
         Email
         <input 
           type="email"
-          className="border rounded w-full py-1 px-2 font-normal" {...register("email", {required: "Questo campo è necessario"})}
+          className="border rounded w-full py-1 px-2 font-normal" {...register("email", {required: "Questo campo è obbligatorio"})}
           />
           {errors.email && (
           <span className="text-red-500">{errors.email.message}</span>
@@ -67,7 +67,7 @@ const Register = ()=> {
         <input 
           type="password"
           className="border rounded w-full py-1 px-2 font-normal" {...register("password", {
-            required: "Questo campo è necessario", 
+            required: "Questo campo è obbligatorio", 
             minLength: {
               value: 6,
               message: "La Password deve essere almeno di 6 caratteri",
