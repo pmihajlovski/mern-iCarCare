@@ -1,5 +1,6 @@
 import {RegisterFormData} from "./pages/Register.tsx";
 import { SignInFormData } from "./pages/SignIn.tsx";
+import { CarType } from "../../backend/src/shared/types.ts";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 //fetch request
@@ -71,6 +72,16 @@ export const addMyCar = async (carFormData: FormData) => {
   
   if(!response.ok){
     throw new Error("Failed to add hotel");
+  }
+  return response.json();
+};
+
+export const fetchMyCars = async (): Promise<CarType[]> => {
+  const response = await fetch(`${API_BASE_URL}/api/my-cars`,{
+    credentials: "include"
+  });
+  if(!response.ok){
+    throw new Error("Errore caricamento hotel");
   }
   return response.json();
 };

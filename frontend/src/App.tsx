@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
 import { useAppContext } from "./contexts/AppContext";
 import AddCar from "./pages/AggiungiAuto";
+import MyCars from "./pages/MyCars";
 
 const App = () => {
   const {isLoggedIn} = useAppContext();
@@ -37,6 +38,13 @@ const App = () => {
           <Route path="/add-car" element={
             <Layout>
               <AddCar />
+            </Layout>
+          }/>
+        </>}
+        {isLoggedIn && <>
+          <Route path="/my-cars" element={
+            <Layout>
+              <MyCars />
             </Layout>
           }/>
         </>}

@@ -1,9 +1,10 @@
 import express, {Request, Response} from "express";
 import multer from "multer";
 import cloudinary from "cloudinary";
-import Car, { CarType } from "../models/car";
+import Car from "../models/car";
 import verifyToken from "../middleware/auth";
 import { body } from "express-validator";
+import { CarType } from "../shared/types";
 
 const router = express.Router();
 //store any images in memory
@@ -58,5 +59,16 @@ upload.array("imageFiles", 6),async(req: Request, res: Response) => {
     res.status(500).json({ message: "Qualcosa è andato storto"});
   }
 });
+
+router.get("/" , verifyToken, async(req: Request, res: Response)=> {
+
+  try {
+    const cars = await Car.find({userId: req.userId})
+    res.json(cars);
+  } catch (error) {
+    res.status(500).json({message: "Errore con le macchine"})
+  }
+});
+
 
 export default router;

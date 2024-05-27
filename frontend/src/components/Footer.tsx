@@ -5,9 +5,10 @@ const Footer = ()=>{
         <span className="text-3xl text-amber-500 font-bold tracking-tight">
           ICarCare.com
         </span>
-        <span className="text-amber-500 font-bold tracking-tight flex gap-4">
-          <p className="cursor-pointer">Privacy Policy</p>
-          <p className="cursor-pointer">Terms of Service</p>
+        <span className="text-3xl text-amber-500 font-bold tracking-tight gap-4">
+          Contatti
+          <p className="cursor-pointer text-xl">Email</p>
+          <p className="cursor-pointer text-xl">Facebbok</p>
         </span>
       </div>
     </div>
