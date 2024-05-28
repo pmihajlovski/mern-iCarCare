@@ -26,7 +26,6 @@ router.post("/", verifyToken,
   body("type").notEmpty().withMessage("Il tipo di macchina è richiesto"),
   body("targa").notEmpty().withMessage("La targa è richieste"),
   body("anno").notEmpty().withMessage("L'anno è richiesto"),
-  
 ],
 upload.array("imageFiles", 6),async(req: Request, res: Response) => {
   //need to handle images now
