@@ -12,11 +12,10 @@ import AddCar from "./pages/AggiungiAuto";
 import MyCars from "./pages/MyCars";
 import HomePage from "./pages/HomePage";
 import EditCar from "./pages/EditCar";
-import wave from "./pages/res/wave.svg"
 const App = () => {
   const {isLoggedIn} = useAppContext();
   return (
-    <div className="back" style={{backgroundImage: `url(${wave})`}} >
+    <div className="back" style={{backgroundImage: `url(https://res.cloudinary.com/dwnc3l2ij/image/upload/v1721030782/wave-haikei_1_dpa9r0.svg)`}} >
       <Router>
         <Routes>
           <Route path="/" element={<Layout>
