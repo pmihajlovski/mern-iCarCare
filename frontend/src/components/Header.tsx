@@ -7,7 +7,7 @@ const Header = ()=> {
     //tracking-tight space words better
   const{isLoggedIn} = useAppContext();
   return(
-    <div className="bg-slate-950 py-6">
+    <div className="bg-background_color py-6">
       <div className="container mx-auto flex justify-between">
         <span className="text-3xl text-amber-500 font bold tracking-tight">
           <Link to = "/">
@@ -19,12 +19,18 @@ const Header = ()=> {
             <>
               <Link className="flex itmes-center px-3 font-bold hover:bg-amber-800" to ="/mio-noleggio">Noleggia auto</Link>
               <Link className="flex itmes-center px-3 font-bold hover:bg-amber-800" to ="/my-cars">La tua auto</Link>
+              <Link className="flex itmes-center px-3 font-bold hover:bg-amber-800" to ="/my-cars">Itinerari di viaggio</Link>
+              <Link className="flex itmes-center px-3 font-bold hover:bg-amber-800" to ="/my-cars">Manutenzione</Link>
               <SignOutButton/>
             </>
           ) : (
-          <Link to="/sign-in" className="flex items-center text-white px-3 font-bold hover:bg-amber-500">
-            Sign in
-          </Link>
+          <>
+            <Link className="flex itmes-center px-3 font-bold hover:bg-amber-800" to ="/itinerari-viaggio">Noleggia auto</Link>
+            <Link className="flex itmes-center px-3 font-bold hover:bg-amber-800" to ="/my-cars">Manutenzione</Link>
+            <Link to="/sign-in" className="flex itmes-center px-3 font-bold hover:bg-amber-800">
+              Sign in
+            </Link>
+          </>
           )}
         </span>
       </div>

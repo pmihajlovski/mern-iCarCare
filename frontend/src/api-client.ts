@@ -85,3 +85,28 @@ export const fetchMyCars = async (): Promise<CarType[]> => {
   }
   return response.json();
 };
+
+export const fetchMyCarById = async (cardId: string): Promise<CarType> =>{
+  const response = await fetch(`${API_BASE_URL}/api/my-cars/${cardId}`,{
+    credentials: "include",
+  });
+  if(!response.ok){
+    throw new Error("Errore con macchine")
+  }
+  return response.json();
+}
+
+export const updateMyCarById = async (carFormData: FormData) =>{
+  const response = await fetch(
+    `${API_BASE_URL}/api/my-cars/${carFormData.get("carId")}`,
+    {
+      method: "PUT",
+      body: carFormData,
+      credentials: "include",
+    }
+  );
+  if(!response.ok){
+    throw new Error("Errore nell'aggiornamento auto");
+  }
+  return response.json();
+};

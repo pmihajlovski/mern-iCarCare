@@ -1,6 +1,6 @@
 const Hero = () => {
   return(
-    <div className="bg-slate-950 pb-16">
+    <div className="bg-background_color pb-16">
       <div className="container mx-auto flex flex-col gap-2">
         <h1 className="text-5xl text-amber-500 font-bold">
           Noleggio, Riparazione e gestione pratiche

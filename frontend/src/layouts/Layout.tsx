@@ -8,10 +8,10 @@ interface Props{
 const Layout = ({children}: Props) => {
   return(
     //this anchor the footer and the header to the top and to the bottom. this are tailwind css classes.
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Header/>
       <Hero/>
-      <div className="container mx-auto py-10 flex-1">
+      <div className="container mx-auto py-10 flex-1 ">
         {children}
       </div>
       <Footer/>
