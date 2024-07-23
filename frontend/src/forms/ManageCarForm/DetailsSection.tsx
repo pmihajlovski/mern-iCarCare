@@ -5,10 +5,10 @@ const DetailsSection = () => {
   const { register, formState: { errors } } = useFormContext<CarFormData>();
 
   return(
-    <div className="flex flex-col gap-4">
+    <div className="text-[#ffaa00] flex flex-col gap-4">
       <h1 className="text-3xl font-bold mb-3">Aggiungi La Tua Auto</h1>
       <div className="flex gap-4">
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-sm font-bold flex-1">
           Marca
           <input 
             type="text"
@@ -18,7 +18,7 @@ const DetailsSection = () => {
             <span className="text-red-500">{errors.brand.message}</span>
             )}
         </label>
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className=" text-sm font-bold flex-1">
           Modello
           <input 
             type="text"
@@ -30,7 +30,7 @@ const DetailsSection = () => {
         </label>
       </div>
       <div className="flex gap-4">
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className=" text-sm font-bold flex-1">
           Città
           <input 
             type="text"
@@ -40,7 +40,7 @@ const DetailsSection = () => {
             <span className="text-red-500">{errors.city.message}</span>
             )}
         </label>
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className=" text-sm font-bold flex-1">
           Anno
           <input 
             type="number"
@@ -51,7 +51,7 @@ const DetailsSection = () => {
             )}
         </label>
       </div>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className=" text-sm font-bold flex-1">
         Targa
         <input 
           type="text"
@@ -61,7 +61,7 @@ const DetailsSection = () => {
           <span className="text-red-500">{errors.targa.message}</span>
           )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-[#002233] text-sm font-bold flex-1">
         Descrizione
         <textarea 
           rows={10}

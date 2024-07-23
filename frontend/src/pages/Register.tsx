@@ -35,16 +35,16 @@ const Register = ()=> {
   });
   return (
     <form className="flex flex-col gap-5" onSubmit={onSubmit}>
-      <h2 className="text-3xl font-bold">Crea un Account</h2>
+      <h2 className="text-3xl font-bold text-[#ffaa00]">Crea un Account</h2>
       <div className="flex flex-col md:flex-row gap-5">
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-[#ffaa00] text-sm font-bold flex-1">
           Nome
           <input className="border rounded w-full py-1 px-2 font-normal" {...register("firstName", {required: "Questo campo è necessario"})}/>
           {errors.firstName && (
           <span className="text-red-500">{errors.firstName.message}</span>
           )}
         </label>
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-[#ffaa00] text-sm font-bold flex-1">
           Cognome
           <input className="border rounded w-full py-1 px-2 font-normal" {...register("lastName", {required: "Questo campo è necessario"})}/>
           {errors.lastName && (
@@ -52,7 +52,7 @@ const Register = ()=> {
           )}
         </label>
       </div>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-[#ffaa00] text-sm font-bold flex-1">
         Email
         <input 
           type="email"
@@ -62,7 +62,7 @@ const Register = ()=> {
           <span className="text-red-500">{errors.email.message}</span>
           )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-[#ffc34c] mix-blend-color-dodge text-sm font-bold flex-1">
         Password
         <input 
           type="password"
@@ -77,7 +77,7 @@ const Register = ()=> {
           <span className="text-red-500">{errors.password.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-[#002233] text-sm font-bold flex-1">
         Conferma Password
         <input 
           type="password"

@@ -50,11 +50,11 @@ const SignIn = () => {
           <span className="text-red-500">{errors.email.message}</span>
           )}
       </label>
-      <label className="text-gray-700 text-sm font-bold flex-1">
+      <label className="text-[#ffaa00] text-sm font-bold flex-1">
         Password
         <input 
           type="password"
-          className="border rounded w-full py-1 px-2 font-normal" {...register("password", {
+          className="border rounded bg- w-full py-1 px-2 font-normal" {...register("password", {
             required: "Questo campo è necessario", 
             minLength: {
               value: 6,
@@ -65,7 +65,7 @@ const SignIn = () => {
           <span className="text-red-500">{errors.password.message}</span>
         )}
       </label>
-      <span className="flex itmer-center justify-between">
+      <span className="my-5 flex itmer-center justify-between">
         <span className="text-sm">
           Non hai ancora un account?<Link className="underline"to ="/register"> Crea un account qui</Link>
         </span>

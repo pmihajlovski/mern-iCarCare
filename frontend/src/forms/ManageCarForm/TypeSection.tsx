@@ -8,7 +8,7 @@ const TypeSection = () => {
 
   return(
     <div>
-      <h2 className="text-2xl font-bold mb-3">Tipo</h2>
+      <h2 className="text-[#ffaa00] text-2xl font-bold mb-3">Tipo</h2>
       <div className="grid grid-cols-3 gap-3">
         {carTypes.map((type)=> (
           <label className={
