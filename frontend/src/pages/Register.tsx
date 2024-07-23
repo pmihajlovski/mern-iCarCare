@@ -62,7 +62,7 @@ const Register = ()=> {
           <span className="text-red-500">{errors.email.message}</span>
           )}
       </label>
-      <label className="text-[#ffc34c] mix-blend-color-dodge text-sm font-bold flex-1">
+      <label className="text-[#ffc34c] text-sm font-bold flex-1">
         Password
         <input 
           type="password"
